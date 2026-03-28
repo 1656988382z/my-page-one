@@ -93,7 +93,11 @@
         function showCreate() {
             currentIssue = null;
             const header = document.getElementById('form-header');
-            if(header) header.innerText = "New Chapter";
+            if (header) {
+        header.innerText = "New Chapter";
+    } else {
+        console.error("找不到 ID 为 form-header 的元素！");
+    }
             document.getElementById('form-title').value = "";
             document.getElementById('form-body').value = "";
             switchView('view-form');
