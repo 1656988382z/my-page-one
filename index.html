@@ -25,20 +25,29 @@
             <button onclick="saveToken()" class="w-full py-3 bg-indigo-600 rounded-lg font-bold text-sm hover:bg-indigo-500">激活云端同步</button>
         </div>
 
-        <div id="view-main" class="hidden">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-slate-400 text-sm">Recent Chapters</h2>
-                   <p> 1.今天最起波澜的是什么</p>
-                   <p> 2.我的第一反应是什么</p>
-                   <p> 3.我其实想得到什么</p>
-                   <p> 4.我其实在害怕什么</p>
-                   <p> 5.我自己给自己找了一个什么样子的理由</p>
-                   <p> 6.今天捞起来的主石头是什么</p>
-                   <p> 7.如果明天遇到一样的事情 我准备怎么选</p>
-                <button onclick="showCreate()" class="text-xs bg-emerald-600 px-4 py-1.5 rounded hover:bg-emerald-500 font-bold">+ New</button>
-            </div>
-            <div id="list-container" class="space-y-3"></div>
+        <div id="view-main" class="hidden p-6"> <div class="flex justify-between items-center mb-8 border-b border-slate-700 pb-4">
+        <h2 class="text-emerald-400 font-mono text-lg tracking-wider">Recent Chapters</h2>
+        <button onclick="showCreate()" class="text-xs bg-emerald-600 px-4 py-2 rounded-sm hover:bg-emerald-500 font-bold transition-all shadow-lg active:scale-95">+ NEW LOG</button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 bg-slate-800/50 p-4 rounded-lg border border-slate-700">
+        <div class="text-slate-400 text-xs leading-relaxed space-y-2">
+            <p><span class="text-emerald-500">1.</span> 今天最起波澜的是什么？</p>
+            <p><span class="text-emerald-500">2.</span> 我的第一反应是什么？</p>
+            <p><span class="text-emerald-500">3.</span> 我其实想得到什么？</p>
+            <p><span class="text-emerald-500">4.</span> 我其实在害怕什么？</p>
         </div>
+        <div class="text-slate-400 text-xs leading-relaxed space-y-2">
+            <p><span class="text-emerald-500">5.</span> 我自己给自己找了什么理由？</p>
+            <p><span class="text-emerald-500">6.</span> 今天捞起来的主石头是什么？</p>
+            <p><span class="text-emerald-500">7.</span> 如果明天遇到，准备怎么选？</p>
+        </div>
+    </div>
+
+    <div id="list-container" class="space-y-4"></div>
+</div>
+
+        
 
         <div id="view-form" class="hidden space-y-4">
             <h3 id="form-header" class="text-xl font-bold text-slate-200">New Chapter</h3>
